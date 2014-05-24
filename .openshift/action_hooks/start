@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd $OPENSHIFT_REPO_DIR
+
+nohup java -jar target/scala-2.10/spray-template-fat.jar > $OPENSHIFT_LOG_DIR/spray.log 2>&1 &

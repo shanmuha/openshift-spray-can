@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Install sbt in the data dir
+cd $OPENSHIFT_DATA_DIR
+
+if [[ -d sbt ]]; then
+  echo "SBT already installed"
+else
+ curl -L -o sbt.tgz http://dl.bintray.com/sbt/native-packages/sbt/0.13.2/sbt-0.13.2.tgz
+ tar xvfz sbt.tgz sbt
+ rm sbt.tgz
+fi
